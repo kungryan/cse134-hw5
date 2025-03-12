@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Some Experiments</title>
+        <link href="assets/images/experiment.ico" rel="icon">
+        <link href="assets/stylesheets/base.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="scripts/theme.js"></script>
+        <noscript>
+            <link href="assets/stylesheets/base-no-js.css" rel="stylesheet">
+        </noscript>
+        <header>
+            <hgroup>
+                <h1>Experiments</h1>
+                <p>A page for testing things</p>
+            </hgroup>
+            <menu-button>
+                <input type="checkbox" id="menuButton" name="menuButton">
+                <label for="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 
+                            2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 
+                            2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                </label>
+            </menu-button>
+            <nav>
+                <a href="index.html">Home Page</a>
+                <a href="contact.html">Contact</a>
+                <a href="feed.html">Feed</a>
+                <a href="updates.html">Updates</a>
+            </nav>
+            <hr>
+        </header>
+        <main>
+            <pre>
+                E  X  P  E  R  I  
+                                M  E  N  T  A  L
+            </pre>
+            <section id="mathSection">
+                <p>
+                    <math>
+                        <mrow>
+                            <mi>E</mi>
+                            <mo>=</mo>
+                            <mi>m</mi>
+                            <msup>
+                                <mi>c</mi>
+                                <mn>2</mn>
+                            </msup>
+                            
+                        </mrow>
+                    </math>
+                </p>
+            </section>
+            <section id="canvasSection">
+                <canvas id="hwCanvas" width="200" height="100"></canvas>
+                <!--Script for canvas-->
+                <script>
+                    var c=document.getElementById("hwCanvas");
+                    var ctx=c.getContext("2d");
+                    ctx.font="30px Times New Roman";
+                    // Create gradient
+                    var gradient=ctx.createLinearGradient(0,0,c.width,0);
+                    gradient.addColorStop("0","blue");
+                    gradient.addColorStop("1","red");
+                    // Fill with gradient
+                    ctx.fillStyle=gradient;
+                    ctx.fillText("Hello World!",0,50);
+                </script>
+                <noscript>A canvas would have a funky hello world text</noscript>
+                <br>
+                <hello-world id="helloWorld" onclick="console.log('Hello World')">Click Me!</hello-world>
+                <br>
+                <code>
+                    onclick="console.log('Hello World')"
+                </code>
+                <noscript>Hello World would be written with <abbr>JS</abbr> (JavaScript)</noscript>
+                <br>
+            </section>
+            <section id="penSection">
+                <video controls width="640" height="480" muted>
+                    <source src="videos/combo.mp4">
+                </video>
+                <blockquote cite="https://www.youtube.com/watch?v=vyuaA-vCQW4">
+                    <p>A combo solely composed out of Fundamentals and their Reverses</p>
+                    <p><abbr title="Palm Side">[PS]</abbr> Pass 12-23-34-23-12-23-34-23 > <abbr title="Palm Down">[PD]</abbr> Twisted Sonic 23-12 > 
+                        Warped Sonic 12-23 > <abbr title="Inverse">Inv</abbr> Twisted Sonic 23-12 > [PS] Thumbaround Harmonic > Pass 12-23-34-23 > 
+                        Twisted Sonic 23-12 > Warped Sonic 12-23 > Pass <abbr title="Reverse">Rev</abbr> 23-12 > Twisted Sonic Rev 12-23 > 
+                        [PD] Twisted Sonic 23-12 > [PS] Pass Rev 12-23-34-23-12-23-34 > Thumbaround T3-T1
+                    </p>
+                </blockquote>
+                <p>Errior, <cite><a href="https://www.youtube.com/watch?v=vyuaA-vCQW4">YouTube</a></cite></p>
+                <br>
+                <p>A <dfn>combo</dfn> is a series of pen tricks linked together.</p>
+                <dl>
+                    <dt>Palm Side</dt>
+                    <dd>The orientation of the hand is vertical</dd>
+
+                    <dt>Palm Down</dt>
+                    <dd>The orientation of the hand is horizontal and the back of hand is visible</dd>
+
+                    <dt>Palm Up</dt>
+                    <dd>The orientation of the hand is horizontal and the palm is visible</dd>
+
+                    <dt>Reverse</dt>
+                    <dd>A trick that is performed as if it was done in reverse</dd>
+
+                    <dt>Reverse</dt>
+                    <dd>A trick that is performed as if it was done on the opposite side of the hand</dd>
+                </dl>
+            </section>
+        </main>
+    </body>
+</html>

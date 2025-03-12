@@ -1,0 +1,44 @@
+@import url("base.css");
+
+main {
+    margin-inline: auto;
+    max-width: 75rem;
+    display: flex;
+}
+
+changes-section {
+    width: var(--default-width);
+    max-width: var(--default-max-width);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+details {
+    max-width: var(--default-max-width);
+    margin: var(--default-margin);
+    padding: var(--default-padding);
+    justify-items: center;
+}
+
+summary {
+    font-family: lato, Arial, Helvetica, sans-serif;
+    font-size: var(--size-2);
+    user-select: none;
+}
+
+summary::marker {
+    color: var(--primary-1);
+}
+
+ol {
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    list-style-position: inside;
+    font-family: merriweather, 'Times New Roman', Times, serif;
+    background-color: var(--surface-2);
+}
+
+li::marker {
+    color: var(--primary-1);
+}

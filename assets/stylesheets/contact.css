@@ -1,0 +1,145 @@
+@import url("base.css");
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+fieldset {
+    border: 0.2em solid var(--primary-2);
+    background-color: var(--surface-2);
+}
+
+label {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: var(--size-2);
+    padding: var(--slight-padding);
+}
+
+input {
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    font-family: Merriweather, Arial, Helvetica, sans-serif;
+    font-size: var(--size-0);
+    background-color: var(--surface-1);
+    border: var(--primary-text) 1px solid;
+    color: var(--primary-text);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--tonal-6);
+}
+
+#contactInfo {
+    margin-bottom: var(--slight-margin);
+    padding-bottom: var(--slight-padding);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    column-gap: 5rem;
+    row-gap: 1rem;
+}
+
+
+#contactPurpose {
+    margin-bottom: var(--slight-margin);
+    padding-bottom: var(--slight-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    margin: var(--default-margin);
+    padding: var(--default-padding);
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    font-size: var(--size-0);
+    width: 100%;
+    max-width: 75%;
+    margin-inline: auto;
+    resize: vertical;
+    background-color: var(--surface-1);
+    border: var(--primary-text) 1px solid;
+    color: var(--primary-text);
+}
+
+legend {
+    margin-inline: auto;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: var(--size-2);
+    padding: var(--slight-padding);
+}
+
+button[type=submit] {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: var(--size--2);
+    align-self: flex-end;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--surface-2);
+    color: var(--primary-text);
+    border: var(--primary-1) solid 1px;
+}
+
+button[type=submit]:hover {
+    background-color: var(--surface-3);
+    color: var(--primary-1);
+    border: var(--primary-1) solid 1px;
+}
+
+svg {
+    fill: var(--primary-1);
+}
+
+line {
+    stroke: var(--surface-1);
+}
+
+output {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    font-size: var(--size-0);
+}
+
+error-message, info-message {
+    margin: var(--slight-margin);
+}
+
+input:user-invalid, textarea:user-invalid {
+    border: 1px solid var(--error-color);
+}
+
+input:user-invalid + span::before {
+    content: "✖";
+    color: var(--error-color);
+}
+
+input + span {
+    margin: var(--slight-margin);
+}
+
+.active {
+    opacity: 1;
+}
+
+.fadeOut {
+    animation-duration: 1s;
+    animation-name: fadeOut;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

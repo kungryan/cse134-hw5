@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Feed of My Articles</title>
+        <link href="assets/images/feed.ico" rel="icon">
+        <link href="assets/stylesheets/feed.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="scripts/theme.js"></script>
+        <noscript>
+            <link href="assets/stylesheets/base-no-js.css" rel="stylesheet">
+        </noscript>
+        <header>
+            <hgroup>
+                <h1>My Thoughts</h1>
+                <p>A simple place to share my thoughts</p>
+            </hgroup>
+            <menu-button>
+                <input type="checkbox" id="menuButton" name="menuButton">
+                <label for="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 
+                            2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 
+                            2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                </label>
+            </menu-button>
+            <nav>
+                <a href="index.html">Home Page</a>
+                <a href="contact.html">Contact</a>
+                <a href="feed.html">Feed</a>
+                <a href="updates.html">Updates</a>
+                <br>
+                <!--Search functionality to be implemented with JS-->
+                <search title="Website">
+                    <form action="/search">
+                        <label for="articleSearch">Find an article:</label>
+                        <input type="search" name="query" id="articleSearch">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 50 50">
+                                <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 
+                                    30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 
+                                    20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 
+                                    12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                                </path>
+                                </svg>
+                        </button>
+                    </form>
+                </search>
+            </nav>
+            <hr>
+        </header>
+        <main>
+            <div class="articleSection" id="article1">
+                <h2>Website Creation and Future Plans</h2>
+                <p>
+                    When I was younger, I messed around with making websites with really basic HTML without putting too much
+                    thought into anything I was doing. Now that I've more been more formally introduced into the HTML, I am excited to
+                    experiment and figure out what all these tags do and there is frankly <em>a lot</em>. For now, I've set up just the HTML.
+                    I've planned my site around this wireframe:
+                </p>
+                <picture>
+                    <source srcset="assets/images/wireframe_wide.png" width="1080" height="270" media="(min-width: 1091px)">
+                    <img src="assets/images/wireframe_tall.png" width="380" height="1091" alt="Website's Wireframe">
+                </picture>
+                <p>When working on this project, I looked at a few websites from a few people whose work I admire and seeing what they did with their personal websites.</p>
+                <iframe-containter>
+                    <iframe
+                        title="Hank Green's Website"
+                        src="https://hankgreen.com/"
+                        width="640"
+                        height="564"
+                    >
+                    </iframe>
+                </iframe-containter>
+                <p> 
+                    I personally really like the structuring of <cite><a href="https://hankgreen.com/">Hank Green's website</a></cite>
+                    and I like the composition of her projects in <cite><a href="http://lena.fyi/">Lena Raine's website</a></cite>.
+                    I want to have some basic dark and light mode styles while also having my own custom
+                    fun styles that reflect who I am a bit more. I am big into video games so one such idea could be having various click sound effects
+                    that might be related to the themes.
+                </p>
+                <figure>
+                    <figcaption>A typical click that might be more suited for a simple theme</figcaption>
+                    <audio controls>
+                        <source src="assets/sounds/mixkit-typewriter-soft-click-1125.wav" type="audio/wav">
+                        <source src="assets/sounds/mixkit-typewriter-soft-click-1125.mp3" type="audio/mp3">
+                    </audio>
+                </figure>
+                <figure>
+                    <figcaption>A game-esque click that might be more suited for a custom theme</figcaption>
+                    <audio controls>
+                        <source src="assets/sounds/mixkit-game-click-1114.wav" type="audio/wav">
+                        <source src="assets/sounds/mixkit-game-click-1114.mp3" type="audio/mp3">
+                    </audio>
+                </figure>     
+            </div>
+            <template id="articleTemplate">
+                <div id="article">
+                    <h2>Article Name</h2>
+                    <p></p>
+                </div>
+            </template>
+        </main>
+        <footer>
+            <p> This page was made by Ryan Kung </p>
+            <address>
+                Ryan Kung<br>
+                9500 Gilman Dr<br>
+                CA 92093<br>
+            </address>
+        </footer>
+    </body>
+</html>

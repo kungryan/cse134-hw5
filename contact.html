@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Me!</title>
+        <link href="assets/images/contact.ico" rel="icon">
+        <link href="assets/stylesheets/contact.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="scripts/theme.js"></script>
+        <noscript>
+            <link href="assets/stylesheets/base-no-js.css" rel="stylesheet">
+        </noscript>
+        <header>
+            <hgroup>
+                <h1>Contact Me <svg width="40" height="25"> <rect width="40" height="25"></rect> <line x1="0" y1="0" x2="20" y2="13" stroke="white"></line> <line x1="20" y1="13" x2="40" y2="0" stroke="white"></line> </svg> </h1>
+                <p>Fill out the information below and I will get back to you soon!</p>
+            </hgroup>
+            <menu-button>
+                <input type="checkbox" id="menuButton" name="menuButton">
+                <label for="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 
+                            2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 
+                            2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                </label>
+            </menu-button>
+            <nav>
+                <a href="index.html">Home Page</a>
+                <a href="contact.html">Contact</a>
+                <a href="feed.html">Feed</a>
+                <a href="updates.html">Updates</a>
+            </nav>
+            <hr>
+        </header>
+        <main>
+            <form novalidate action="https://httpbin.org/post" method="POST">
+                <fieldset id="contactInfo">
+                    <legend>Contact Information</legend>
+                    <!--TODO with JS--> <input type="hidden" name="possible_bot" value="true">
+                    <name-info>
+                        <label for="name">Name *:</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe" pattern="[A-Za-z ]{1,32}" required minlength="1" maxlength="32">
+                        <span class="invalidSymbol"></span>
+                    </name-info>
+                    <br>
+                    <email-info>
+                        <label for="email">E-mail *:</label>
+                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" minlength="8"
+                            placeholder="JohnDoe@example.com" required>
+                        <span class="invalidSymbol"></span>
+                    </email-info>
+                    <br>
+                    <reason-info>
+                        <label for="reason">Reason:</label>
+                        <input list="reasonList" id="reason" name="reason" placeholder="Buisness" pattern="[A-Za-z ]{1,32}" maxlength="32" optional>
+                        <span class="invalidSymbol"></span>
+                        <datalist id="reasonList">
+                            <option value="Business"></option>
+                            <option value="Inquiries"></option>
+                            <option value="Feedback"></option>
+                        </datalist>
+                    </reason-info>
+                </fieldset>
+                <fieldset id="contactPurpose">
+                    <legend>Message *</legend>
+                    <br>
+                    <comment-area>
+                        <label for="comments"></label>
+                        <textarea name="comments" id="comments" cols="80" rows="5" placeholder="Lorem ipsum" minlength='1' maxlength='250' required></textarea>
+                    </comment-area>
+                    <br>
+                </fieldset>
+                <button type="submit">Submit</button>
+                <output>
+                    <name-error></name-error>
+                    <br>
+                    <email-error></email-error>
+                    <br>
+                    <reason-error></reason-error>
+                    <br>
+                    <comment-error></comment-error>
+                    <br>
+                    <info-message></info-message>
+                </output>
+                <input hidden readonly id="form-errors" name="form-errors">
+            </form>
+        </main>
+        <footer>
+            <p> This page was made by Ryan Kung </p>
+            <address>
+                Ryan Kung<br>
+                9500 Gilman Dr<br>
+                CA 92093<br>
+            </address>
+        </footer>
+
+        <script src="scripts/contact.js"></script>
+    </body>
+</html>
