@@ -22,6 +22,12 @@ export function getFeedCardCSS() {
             max-width: var(--default-max-width);
             height: auto;
             display: flex;
+            justify-content: center;
+        }
+
+        feed-card img {
+            max-width: 100%;
+            height: auto;
         }
     `;
 }

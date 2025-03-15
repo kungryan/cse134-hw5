@@ -36,7 +36,7 @@ async function getData() {
             window.articleItem = document.createElement("feed-card");
             window.articleItem.setAttribute("title", `${article.title}`);
             window.articleItem.setAttribute("subtitle", `${article.subtitle}`);
-            window.articleItem.setAttribute("image-url", `${article.imageUrl}`);
+            window.articleItem.setAttribute("image-url", `${article.image_url}`);
             window.articleItem.setAttribute("description", `${article.description}`);
             window.articleItem.setAttribute("path", `${article.path}`);
             feedSection.appendChild(window.articleItem);

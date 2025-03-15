@@ -14,7 +14,7 @@ class FeedCard extends HTMLElement {
         const imageUrl = this.getAttribute('image-url') || "";
         const description = this.getAttribute('description') || "";
         const path = this.getAttribute('path') || "";
-
+        console.log(imageUrl);
         this.innerHTML = '';
         this.innerHTML += `
             <hgroup>

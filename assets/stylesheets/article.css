@@ -1,0 +1,87 @@
+@import url("base.css");
+
+header > h2 {
+    margin: var(--default-margin);
+    padding: var(--default-padding);
+    font-size: var(--size-4);
+    align-self: center;
+}
+
+main {
+    max-width: 80rem;
+}
+
+section {
+    margin: var(--default-margin);
+    padding: var(--default-padding);
+    max-width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    border: var(--primary-1) 2px solid;
+    background-color: var(--surface-2);
+}
+
+h2 {
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+}
+
+main p {
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    font-family: merriweather, 'Times New Roman', Times, serif;
+    font-size: var(--size-0);
+}
+
+picture {
+    max-width: var(--default-max-width);
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--surface-3);
+}
+
+img, source {
+    width: var(--default-width);
+    max-width: var(--default-max-width);
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+iframe-container {
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    max-width: var(--default-max-width);
+    display: flex;
+    background-color: var(--surface-3);
+}
+iframe {
+    width: var(--default-width);;
+    max-width: var(--default-max-width);
+    display: block;
+    justify-self: center;
+    border: 0;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: var(--size--1);
+    align-self: center;
+}
+
+figure {
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    max-width: var(--default-max-width);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--default-gap);
+}
+
+audio {
+    width: var(--default-width);
+    max-width: var(--default-max-width);
+    object-fit: contain;
+    object-position: 50% 50%;
+    align-self: center;
+}
