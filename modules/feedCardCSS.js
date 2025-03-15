@@ -1,8 +1,11 @@
 export function getFeedCardCSS() {
     return `
         feed-card {
-            margin: var(--default-margin);
+            max-width: 50rem;
+            margin-inline: auto;
             padding: var(--slight-padding);
+            display: flex;
+            flex-flow: column wrap;
         }
 
         feed-card h2 {
@@ -13,6 +16,12 @@ export function getFeedCardCSS() {
             margin: var(--slight-margin);
             padding: var(--slight-padding);
             font-size: var(--size-0);
+        }
+
+        feed-card picture {
+            max-width: var(--default-max-width);
+            height: auto;
+            display: flex;
         }
     `;
 }

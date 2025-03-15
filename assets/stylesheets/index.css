@@ -131,3 +131,12 @@ theme-section svg {
     opacity: 1;
     position: relative;
 }
+
+#feed-section {
+    width: 100%;
+    max-width: 100%;
+}
+
+feed-buttons {
+    margin-inline: auto;
+}

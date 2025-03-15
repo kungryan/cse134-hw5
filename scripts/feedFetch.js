@@ -1,19 +1,16 @@
 let feedSection = document.querySelector("#feed-section");
 let remoteLoadBtn = document.querySelector("#remoteBtn");
+let pending = false;
 
 window.addEventListener('DOMContentLoaded', async() => {
     remoteLoadBtn.addEventListener("click", (event) => {
-        feedSection.innerHTML = "";
-        getData();
+        if (!pending) {
+            pending = true;
+            feedSection.innerHTML = "";
+            getData();
+        }
     });    
 }); 
-
-function buildFeed(article) {
-    let feedCard = document.createElement('feed-card');
-    let h2Tag = (feedCard.getElementsByTagName('h2'))[0]; 
-    console.log(feedCard.getElementsByTagName('h2'));
-    feedSection.append(feedCard);
-}
 
 async function getData() {
     let url = "https://api.jsonbin.io/v3/b/67d48e408561e97a50ec123c/latest"
@@ -44,6 +41,7 @@ async function getData() {
             window.articleItem.setAttribute("path", `${article.path}`);
             feedSection.appendChild(window.articleItem);
         });
+        pending = false;
     } catch(error) {
         console.log(error.message);
     }
