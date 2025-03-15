@@ -89,15 +89,18 @@
         <br>
         <section id="myThoughts">
             <h2>What I Think</h2>
-            <text-section>
-                <p>Show feed does not work for now, here is a <a href="feed.html">link</a> instead!</p>
-                <button>Show Feed</button>
-            </text-section>
-            <dialog>
-                <button autofocus>Hide Feed</button>
-                <p>Some links to some articles or something</p>
-            </dialog>
-            <!--TODO with JS-->
+            <noscript>
+                <text-section>
+                    <p>JavaScript is Off! You can find the feed here: <a href="feed.html">Click Me!</a></p>
+                </text-section>
+            </noscript>
+            <feed-buttons>
+                <button>Load Local</button>
+                <button id="remoteBtn">Load Remote</button>
+            </feed-buttons>
+            <div id="feed-section"></div>
+            <script type="module" src="./modules/feedCard.js"></script>
+            <script src="scripts/feedFetch.js"></script>
         </section>
         <br>
         <section id="projectSection">
@@ -123,14 +126,6 @@
                     </tr>
                 </tbody>
             </table>
-            <!--Generate more rows with JS-->
-            <template id="projectRow">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </template>
         </section>
         <br>
         <section id="skillSection">
