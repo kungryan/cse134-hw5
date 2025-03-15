@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mobile Hamburger Menu with only CSS (and HTML)</title>
+        <link href="../assets/images/feed.ico" rel="icon">
+        <link href="../assets/stylesheets/article.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="../scripts/theme.js"></script>
+        <noscript>
+            <link href="../assets/stylesheets/base-no-js.css" rel="stylesheet">
+        </noscript>
+        <header>
+            <h2>Ryan Kung</h2>
+            <menu-button>
+                <input type="checkbox" id="menuButton" name="menuButton">
+                <label for="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 
+                            2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 
+                            2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                </label>
+            </menu-button>
+            <nav>
+                <a href="../index.html">Home Page</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../feed.html">Feed</a>
+                <a href="../updates.html">Updates</a>
+            </nav>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <h2>Mobile Hamburger Menu with only CSS (and HTML)</h2>
+                <p>
+                    The second part of this portfolio was to style it with some CSS. In addition to the overall asethetic, flexboxes, and custom fonts, one of
+                    the things I was tasked with exploring was responsive design. I used a fluid type scale calculator provided by 
+                    <cite><a href="https://utopia.fyi/type/calculator">Utopia.fyi</a></cite> to have the text feel more fluid and responsive.
+                </p>
+                <p>
+                    Another thing I utilized were breakpoints to determine the layout of the header for desktop, tablet, and mobile displays. For my mobile layout, I first tried a grid display
+                    with 2 columns, but it felt rather clunky and space inefficient. This is when I decided to look into making a typical mobile hamburger menu
+                    that you'd normally see on everyday sites. However, I wasn't supposed to use any JavaScript for this part which meant I had to make this menu
+                    with pure CSS (and HTML of course). Of course, there are already quite a few examples out there, so I knew this was possible. The one that I
+                    particularly liked and used as inspiration is by Janessa Garrow, of which you can find 
+                    <a href="https://janessagarrow.com/blog/pure-css-hamburger-menu/">here</a>.
+                </p>
+                <h3>The HTML</h3>
+<pre><code>&ltheader&gt
+        &lth2&gt...&lt/h2&gt
+        &ltmenu-button&gt
+                &ltinput type="checkbox" id="menuButton" name="menuButton"&gt
+                &ltlabel for="menuButton"&gt
+                        &ltsvg&gt
+                                ⋮
+                        &ltsvg&gt
+                &lt/label&gt
+        &lt/menu-button&gt
+        &ltnav&gt
+                ⋮
+        &lt/nav&gt
+&lt/header&gt
+</code></pre>
+                <p>The HTML itself is very basic with a heading and a nav tag. I use a custom tag menu-button, for semantic purposes, to serve as the wrapper for 
+                    the hamburger menu. I use an checkbox input to serves as a way to keep track of the state of whether or not the user has opened/closed the menu.
+                    The label is wrapped around the SVG that draws the hamburger icon so that pressing on the SVG will also trigger the checkbox. However, we don't want
+                    to actually show the checkbox itself and we want to make sure that we only display the menu for mobile layouts, to which brings us to the CSS portion.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p> This page was made by Ryan Kung </p>
+            <address>
+                Ryan Kung<br>
+                9500 Gilman Dr<br>
+                CA 92093<br>
+            </address>
+        </footer>
+    </body>
+</html>

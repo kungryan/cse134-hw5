@@ -21,7 +21,7 @@ section {
     background-color: var(--surface-2);
 }
 
-h2 {
+h2,h3,h4 {
     margin: var(--slight-margin);
     padding: var(--slight-padding);
 }
@@ -29,7 +29,7 @@ h2 {
 main p {
     margin: var(--slight-margin);
     padding: var(--slight-padding);
-    font-family: merriweather, 'Times New Roman', Times, serif;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
     font-size: var(--size-0);
 }
 
@@ -84,4 +84,21 @@ audio {
     object-fit: contain;
     object-position: 50% 50%;
     align-self: center;
+}
+
+pre {
+    max-width: 100%;
+    border: var(--tonal-3) 2px solid;
+    border-radius: 5px;
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    white-space: pre-wrap;
+}
+
+code {
+    max-width: 100%;
+    font-size: var(--size-0);
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    line-height: 2rem;
+    
 }
