@@ -8,6 +8,10 @@ section {
     padding: var(--slight-padding);
 }
 
+section > h2 {
+    color: var(--secondary-1);
+}
+
 section p {
     font-size: var(--size-1);
     margin-bottom: var(--slight-margin);
@@ -154,4 +158,38 @@ feed-buttons {
 aside {
     font-size: var(--size-0);
     margin-bottom: var(--default-margin);
+}
+
+#bgAnimation {
+    position: fixed;
+    top: 30dvh;
+    left: -15rem;
+    z-index: 1;
+    width: 10rem;
+    height: auto;
+    user-select: none;
+}
+
+#bgAnimation2 {
+    position: fixed;
+    top: 70dvh;
+    left: -15rem;
+    z-index: 1;
+    width: 10rem;
+    height: auto;
+    user-select: none;
+}
+
+#bgAnimation3 {
+    position: fixed;
+    top: 50dvh;
+    left: -15rem;
+    z-index: 1;
+    width: 10rem;
+    height: auto;
+    user-select: none;
+}
+
+section {
+    z-index: 2;
 }

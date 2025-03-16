@@ -68,6 +68,7 @@ textarea {
 }
 
 legend {
+    color: var(--secondary-1);
     margin-inline: auto;
     font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: var(--size-2);

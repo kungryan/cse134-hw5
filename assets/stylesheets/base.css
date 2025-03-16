@@ -37,6 +37,7 @@
     --primary-4: #b5f7c2;
     --primary-5: #c2f9cc;
     --primary-6: #cffad6;
+    --secondary-1: #F28BDA;
     --tonal-1: #1e251f;
     --tonal-2: #333934;
     --tonal-3: #494f4a;
@@ -68,6 +69,7 @@
     --primary-4: #57a1b8;
     --primary-5: #619bae;
     --primary-6: #6996a5;
+    --secondary-1: #D53713;
     --tonal-1: #fff7fb;
     --tonal-2: #f0e9ed;
     --tonal-3: #e1dbde;
@@ -249,7 +251,7 @@ hr, br {
         grid-template-columns: 1fr 10dvw;
         position: sticky;
         top: 0;
-        z-index: 1;
+        z-index: 3;
     }
 
     header hgroup {
