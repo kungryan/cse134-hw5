@@ -135,8 +135,17 @@ theme-section svg {
 #feed-section {
     width: 100%;
     max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 feed-buttons {
     margin-inline: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #feed-section {
+        display: flex;
+        flex-flow: column wrap;
+    }
 }

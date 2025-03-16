@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Theme Switcher With Local Storage</title>
+        <link href="../assets/images/feed.ico" rel="icon">
+        <link href="../assets/stylesheets/article.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="../scripts/theme.js"></script>
+        <noscript>
+            <link href="../assets/stylesheets/base-no-js.css" rel="stylesheet">
+        </noscript>
+        <header>
+            <h2>Ryan Kung</h2>
+            <menu-button>
+                <input type="checkbox" id="menuButton" name="menuButton">
+                <label for="menuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 
+                            2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 
+                            2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                </label>
+            </menu-button>
+            <nav>
+                <a href="../index.html">Home Page</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../feed.html">Feed</a>
+                <a href="../updates.html">Updates</a>
+            </nav>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <h2>Simple Theme Switcher With Local Storage</h2>
+                <p>
+                    Using CSS, I used the "prefers-color-scheme" media feature to determine what theme to show the user. Using JavsScript, I can now implement
+                    a theme switcher that allows the user to choose between light and dark with "prefers-color-scheme" being a noscript failsafe.
+                </p>
+                <h3>The HTML</h3>
+<pre><code>&lthtml class="theme-light"&gt
+        ⋮
+    &ltinput type="button" id="themeSwitch" name="themeSwitch"&gt
+    &ltlabel for="themeSwitch"&gt
+            &ltsvg id="moon" class="hidden"&gt
+                    ⋮
+            &lt/svg&gt
+            &ltsvg id="moon" class="hidden"&gt
+                    ⋮
+            &lt/svg&gt
+    &lt/label&gt
+        ⋮
+&lt/html&gt
+</code></pre>
+            <h3>The JS</h3>
+<pre><code>const themeSwitcher = document.querySelector("#themeSwitch");
+const moon = document.querySelector("#moon");
+const sun = document.querySelector("#sun");
+    
+themeSwitcher.addEventListener("click", (event) => {
+    toggleTheme();
+});
+
+function setTheme(themeName) {
+    localStorage.setItem("theme", themeName);
+    document.documentElement.className = themeName;
+}
+
+function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        sun.classList = "active";
+        moon.classList = "hidden";
+        setTheme('theme-light');
+    } else {
+        moon.classList = "active";
+        sun.classList = "hidden";
+        setTheme('theme-dark');
+    }
+}
+
+(function () {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        moon.classList = "active";
+        sun.classList = "hidden";
+        setTheme('theme-dark');
+    } else {
+        sun.classList = "active";
+        moon.classList = "hidden";
+        setTheme('theme-light');
+    }
+})();
+</code></pre>
+                <p>I use a key "theme" with values either "theme-light" or "theme-dark" in local storage to determine what theme to show the user.
+                    When the button is pressed, we display a moon or sun depending on what theme we swapped to and we change the class of the html
+                    tag which automatically applies the respective CSS selector. The last function automatically sets the theme upon the loading of the
+                    page depending on what the value is in the local storage, defaulting to a light theme.
+                </p>
+<pre><code>function setTheme(themeName) {
+    localStorage.setItem("theme", themeName);
+    document.documentElement.className = themeName;
+}
+
+(function () {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+    } else {
+        setTheme('theme-light');
+    }
+})();
+</code></pre>
+            <p>
+                Since I don't have the theme switcher on other pages, I use a simplified version that doesn't need to swap on a button press or change icons
+                and simplify sets the theme on page load.
+            </p>
+            </section>
+        </main>
+        <footer>
+            <p> This page was made by Ryan Kung </p>
+            <address>
+                Ryan Kung<br>
+                9500 Gilman Dr<br>
+                CA 92093<br>
+            </address>
+        </footer>
+    </body>
+</html>
