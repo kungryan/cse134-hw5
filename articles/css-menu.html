@@ -65,11 +65,37 @@
         &lt/nav&gt
 &lt/header&gt
 </code></pre>
-                <p>The HTML itself is very basic with a heading and a nav tag. I use a custom tag menu-button, for semantic purposes, to serve as the wrapper for 
-                    the hamburger menu. I use an checkbox input to serves as a way to keep track of the state of whether or not the user has opened/closed the menu.
-                    The label is wrapped around the SVG that draws the hamburger icon so that pressing on the SVG will also trigger the checkbox. However, we don't want
+                <p>The HTML itself is very basic with a heading and a nav tag. I use a custom "menu-button" tag, for semantic purposes, to serve as the wrapper for 
+                    the hamburger menu. I use a checkbox input to serves as a way to keep track the state of whether or not the user has opened/closed the menu.
+                    The label is wrapped around the SVG, which is the hamburger icon, so that pressing on the SVG will also trigger the checkbox. However, we don't want
                     to actually show the checkbox itself and we want to make sure that we only display the menu for mobile layouts, to which brings us to the CSS portion.
                 </p>
+                <h3>The CSS</h3>
+<pre><code>nav {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+}
+
+nav > a {
+        pointer-events: none;
+}
+
+input#menuButton {
+        display: none;
+}
+menu-button:has(#menuButton:checked) ~ nav{
+    max-height: 100%;
+}
+
+menu-button:has(#menuButton:checked) ~ nav > a{
+    pointer-events: auto;
+}
+</code></pre>
+            <p>The key part of this CSS that makes the menu work is the max-height property. We set the nav max-height to 0 to hide the nav menu by default 
+                (aka the checkbox is not checked) and we allow the nav menu to expand to fit its elements when it is checked.
+            </p>
             </section>
         </main>
         <footer>

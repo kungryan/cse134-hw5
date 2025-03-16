@@ -32,7 +32,9 @@ async function getData() {
         }
 
         const jsonData = await response.json();
+        const jsonArray = [];
         jsonData.record.forEach(article => {
+            jsonArray.push(JSON.stringify(article));
             window.articleItem = document.createElement("feed-card");
             window.articleItem.setAttribute("title", `${article.title}`);
             window.articleItem.setAttribute("subtitle", `${article.subtitle}`);
@@ -41,6 +43,7 @@ async function getData() {
             window.articleItem.setAttribute("path", `${article.path}`);
             feedSection.appendChild(window.articleItem);
         });
+        localStorage.setItem("feedJson", jsonArray);
         pending = false;
     } catch(error) {
         console.log(error.message);
