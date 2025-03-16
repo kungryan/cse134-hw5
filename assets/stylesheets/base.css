@@ -45,6 +45,13 @@
     --tonal-6: #929693;
     --primary-text: white;
     --error-color: #E57373;
+    --keyword-color: #ef3b7d;
+    --variable-color: #76d9e6;
+    --string-color: #e6d06c;
+    --operation-color: #a77afe;
+    --tag-color: #74d67e;
+    --attribute-color: #5e95c6;
+    --value-color: #a5d6ff;
 }
 
 
@@ -69,6 +76,13 @@
     --tonal-6: #b6b3b5;
     --primary-text: black;
     --error-color: #D32F2F;
+    --keyword-color: #51c1e6;
+    --variable-color: #9a050f;
+    --string-color: #e3116c;
+    --operation-color: #000;
+    --tag-color: #306df1;
+    --attribute-color: #e24c3f;
+    --value-color: #b02013;
 }
 
 /* @link https://fonts.google.com/specimen/Lato */
@@ -279,4 +293,33 @@ button:hover {
 
 hr, br {
     display: none;
+}
+
+.keyword {
+    color: var(--keyword-color);
+    font-style: italic;
+}
+
+.string {
+    color: var(--string-color);
+}
+
+.variable {
+    color: var(--variable-color);
+}
+
+.operation {
+    color: var(--operation-color);
+}
+
+.tag {
+    color: var(--tag-color);
+}
+
+.attribute {
+    color: var(--attribute-color);
+}
+
+.value {
+    color: var(--value-color);
 }

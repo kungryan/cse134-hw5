@@ -50,20 +50,20 @@
                     <a href="https://janessagarrow.com/blog/pure-css-hamburger-menu/">here</a>.
                 </p>
                 <h3>The HTML</h3>
-<pre><code>&ltheader&gt
-        &lth2&gt...&lt/h2&gt
-        &ltmenu-button&gt
-                &ltinput type="checkbox" id="menuButton" name="menuButton"&gt
-                &ltlabel for="menuButton"&gt
-                        &ltsvg&gt
+<pre><code>&lt<span class="tag">header</span>&gt
+        &lt<span class="tag">h2</span>&gt...&lt<span class="tag">/h2</span>&gt
+        &lt<span class="tag">menu-button</span>&gt
+                &lt<span class="tag">input</span> <span class="attribute">type</span>="<span class="value">checkbox</span>" <span class="attribute">id</span>="<span class="value">menuButton</span>"" <span class="attribute">name</span>="<span class="value">menuButton</span>"&gt
+                &lt<span class="tag">label</span> <span class="attribute">for</span>="<span class="value">menuButton</span>"&gt
+                        &lt<span class="tag">svg</span>&gt
                                 ⋮
-                        &ltsvg&gt
-                &lt/label&gt
-        &lt/menu-button&gt
-        &ltnav&gt
+                        &lt<span class="tag">/svg</span>&gt
+                &lt<span class="tag">/label</span>&gt
+        &lt<span class="tag">/menu-button</span>&gt
+        &lt<span class="tag">nav</span>&gt
                 ⋮
-        &lt/nav&gt
-&lt/header&gt
+        &lt<span class="tag">/nav</span>&gt
+&lt<span class="tag">/header</span>&gt
 </code></pre>
                 <p>The HTML itself is very basic with a heading and a nav tag. I use a custom "menu-button" tag, for semantic purposes, to serve as the wrapper for 
                     the hamburger menu. I use a checkbox input to serves as a way to keep track the state of whether or not the user has opened/closed the menu.

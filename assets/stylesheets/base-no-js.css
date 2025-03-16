@@ -20,6 +20,10 @@
         --tonal-6: #b6b3b5;
         --primary-text: black;
         --error-color: #D32F2F;
+        --keyword-color: #51c1e6;
+        --variable-color: #9a050f;
+        --string-color: #e3116c;
+        --operation-color: #000;
     }
 }
 
@@ -45,5 +49,9 @@
         --tonal-6: #929693;
         --primary-text: white;
         --error-color: #E57373;
+        --keyword-color: #ef3b7d;
+        --variable-color: #76d9e6;
+        --string-color: #e6d06c;
+        --operation-color: #a77afe;
     }
 }
