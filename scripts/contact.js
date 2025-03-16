@@ -9,6 +9,8 @@ const reasonError = document.querySelector("reason-error");
 const commentError = document.querySelector("comment-error");
 const formErrorInput = document.querySelector("#form-errors");
 const form_errors = [];
+const sendSound = new Audio('../assets/sounds/confirmation_003.ogg');
+sendSound.volume = 0.5;
 
 email.addEventListener("input", (event) => {
     if (email.validity.valid) {
@@ -55,27 +57,35 @@ comments.addEventListener("input", (event) => {
 });
 
 form.addEventListener("submit", (event) => {
+    let invalid = false;
     if (!email.validity.valid) {
         emailError.className = "active";
         showEmailError();
         event.preventDefault(event);
+        invalid = true;
     }
     if (!userName.validity.valid) {
         nameError.className = "active";
         showNameError();
         event.preventDefault(event);
+        invalid = true;
     }
     if (!reason.validity.valid) {
         reasonError.className = "active";
         showReasonError();
         event.preventDefault(event);
+        invalid = true;
     }
     if (!comments.validity.valid) {
         commentError.className = "active";
         showCommentError();
         event.preventDefault(event);
+        invalid = true;
     }
     formErrorInput.value = form_errors;
+    if (!invalid) {
+        sendSound.play();
+    }
 });
 
 function showEmailError() {

@@ -145,91 +145,6 @@ h3 {
     font-size: var(--size-2);
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        display: grid;
-        grid-template-columns: 1fr 10dvw;
-    }
-
-    nav {
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-flow: column;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s ease-out;
-    }
-
-    nav > a {
-        pointer-events: none;
-    }
-
-    menu-button {
-        margin: var(--default-margin);
-        width: 5dvw;
-        height: 5dvh;
-        justify-self: flex-end;
-    }
-
-    input#menuButton {
-        display: none;
-    }
-
-    label[for=menuButton] > svg {
-        cursor: pointer;
-        user-select: none;
-        width: var(--default-width);
-        max-width: var(--default-max-width);
-        fill: var(--primary-1);
-        transition: transform 0.2s ease-out;
-    }
-
-    menu-button:has(#menuButton:checked) ~ nav{
-        max-height: var(--default-max-height);
-    }
-
-    menu-button:has(#menuButton:checked) ~ nav > a{
-        pointer-events: auto;
-    }
-
-    #menuButton:checked ~ label > svg {
-        transform: rotate(90deg);
-    }
-}
-
-@media screen and (min-width: 769px) {
-    menu-button {
-        display: none;
-    }
-
-    header {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    nav {
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1281px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    nav {
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-}
-
 nav {
     margin: var(--default-margin);
     padding: var(--default-padding);
@@ -322,4 +237,103 @@ hr, br {
 
 .value {
     color: var(--value-color);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: var(--size-3);
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 10dvw;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    header hgroup {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    nav {
+        font-family: Lato, Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+        padding-top: 0;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    nav > a {
+        pointer-events: none;
+    }
+
+    menu-button {
+        margin: var(--default-margin);
+        width: 5dvw;
+        height: 5dvh;
+        justify-self: flex-end;
+    }
+
+    input#menuButton {
+        display: none;
+    }
+
+    label[for=menuButton] > svg {
+        cursor: pointer;
+        user-select: none;
+        width: var(--default-width);
+        max-width: var(--default-max-width);
+        fill: var(--primary-1);
+        transition: transform 0.2s ease-out;
+    }
+
+    menu-button:has(#menuButton:checked) ~ nav{
+        max-height: var(--default-max-height);
+    }
+
+    menu-button:has(#menuButton:checked) ~ nav > a{
+        pointer-events: auto;
+    }
+
+    #menuButton:checked ~ label > svg {
+        transform: rotate(90deg);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    menu-button {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+    }
+
+    nav {
+        font-family: Lato, Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        font-family: Lato, Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }

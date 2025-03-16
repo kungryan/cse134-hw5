@@ -1,6 +1,8 @@
 let feedSection = document.querySelector("#feed-section");
 let remoteLoadBtn = document.querySelector("#remoteBtn");
 let pending = false;
+const buttonSound = new Audio('../assets/sounds/switch_002.ogg');
+buttonSound.volume = 0.5;
 
 window.addEventListener('DOMContentLoaded', async() => {
     remoteLoadBtn.addEventListener("click", (event) => {
@@ -45,6 +47,7 @@ async function getData() {
         });
         localStorage.setItem("feedJson", jsonArray);
         pending = false;
+        buttonSound.play();
     } catch(error) {
         console.log(error.message);
     }

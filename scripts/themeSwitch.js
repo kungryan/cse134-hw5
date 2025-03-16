@@ -2,6 +2,7 @@ const themeSwitcher = document.querySelector("#themeSwitch");
 const moon = document.querySelector("#moon");
 const sun = document.querySelector("#sun");
 const audio = new Audio('../assets/sounds/mixkit-typewriter-soft-click-1125.mp3');
+audio.volume = 0.5;
 
 
 themeSwitcher.addEventListener("click", (event) => {

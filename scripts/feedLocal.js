@@ -1,4 +1,6 @@
 let localLoadBtn = document.querySelector("#localBtn");
+const errorSound = new Audio('../assets/sounds/error_004.ogg');
+errorSound.volume = 0.5;
 
 window.addEventListener('DOMContentLoaded', async() => {
     localLoadBtn.addEventListener("click", (event) => {
@@ -8,10 +10,12 @@ window.addEventListener('DOMContentLoaded', async() => {
             feedSection.innerHTML = `
                 <p>No local storage, please fetch data remotely at least once!</p>
             `;
+            errorSound.play();
         } else {
             jsonData = "[" + jsonData + "]";
             pending = true;
             populateFeed(jsonData);
+            buttonSound.play();
         }
     });    
 });
